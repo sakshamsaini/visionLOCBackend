@@ -1,0 +1,144 @@
+[
+	{
+		"camera_id": "CAM001",
+		"latitude": 27.1767,
+		"longitude": 78.0081,
+		"image_width": 640,
+		"image_height": 2,
+		"fov_deg": 60,
+		"focal_length_px": 554.25,
+		"detections": [
+			{
+				"label": "person",
+				"bbox": {
+					"x": 350,
+					"y": 420,
+					"w": 60,
+					"h": 120
+				},
+				"timestamp": "2025-04-30T10:01:00Z",
+				"type": "person",
+				"imagePath": "/home/mahima/Pictures/1.jpeg"
+			},
+			{
+				"label": "car",
+				"bbox": {
+					"x": 120,
+					"y": 300,
+					"w": 150,
+					"h": 90
+				},
+				"timestamp": "2025-04-30T10:01:05Z",
+				"type": "vehicle",
+				"imagePath": "/home/mahima/Pictures/2.jpeg"
+			},
+			{
+				"label": "bicycle",
+				"bbox": {
+					"x": 500,
+					"y": 250,
+					"w": 100,
+					"h": 80
+				},
+				"timestamp": "2025-04-30T10:01:10Z",
+				"type": "vehicle",
+				"imagePath": "/home/mahima/Pictures/2.jpeg"
+			},
+			{
+				"label": "dog",
+				"bbox": {
+					"x": 200,
+					"y": 350,
+					"w": 70,
+					"h": 60
+				},
+				"timestamp": "2025-04-30T10:01:15Z",
+				"type": "animal",
+				"imagePath": "/home/mahima/Pictures/3.jpeg"
+			},
+			{
+				"label": "person",
+				"bbox": {
+					"x": 400,
+					"y": 410,
+					"w": 65,
+					"h": 125
+				},
+				"timestamp": "2025-04-30T10:01:20Z",
+				"type": "person",
+				"imagePath": "/home/mahima/Pictures/1.jpeg"
+			}
+		]
+	},
+	{
+		"camera_id": "CAM002",
+		"latitude": 28.6139,
+		"longitude": 77.2090,
+		"image_width": 640,
+		"image_height": 3,
+		"fov_deg": 60,
+		"focal_length_px": 554.25,
+		"detections": [
+			{
+				"label": "truck",
+				"bbox": {
+					"x": 150,
+					"y": 280,
+					"w": 180,
+					"h": 100
+				},
+				"timestamp": "2025-04-30T10:02:00Z",
+				"type": "vehicle",
+				"imagePath": "/home/mahima/Pictures/2.jpeg"
+			},
+			{
+				"label": "car",
+				"bbox": {
+					"x": 360,
+					"y": 300,
+					"w": 120,
+					"h": 80
+				},
+				"timestamp": "2025-04-30T10:02:05Z",
+				"type": "vehicle",
+				"imagePath": "/home/mahima/Pictures/2.jpeg"
+			},
+			{
+				"label": "bus",
+				"bbox": {
+					"x": 210,
+					"y": 270,
+					"w": 220,
+					"h": 110
+				},
+				"timestamp": "2025-04-30T10:02:10Z",
+				"type": "vehicle",
+				"imagePath": "/home/mahima/Pictures/2.jpeg"
+			},
+			{
+				"label": "person",
+				"bbox": {
+					"x": 430,
+					"y": 400,
+					"w": 60,
+					"h": 130
+				},
+				"timestamp": "2025-04-30T10:02:15Z",
+				"type": "person",
+				"imagePath": "/home/mahima/Pictures/1.jpeg"
+			},
+			{
+				"label": "bicycle",
+				"bbox": {
+					"x": 480,
+					"y": 330,
+					"w": 95,
+					"h": 75
+				},
+				"timestamp": "2025-04-30T10:02:20Z",
+				"type": "vehicle",
+				"imagePath": "/home/mahima/Pictures/2.jpeg"
+			}
+		]
+	}
+]
