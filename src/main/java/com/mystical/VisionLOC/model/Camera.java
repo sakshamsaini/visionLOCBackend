@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.mystical.VisionLOC.dto.CameraDTO;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -40,7 +41,7 @@ public class Camera {
 	@Column(nullable = false)
 	private Long createdBy;
 
-	@OneToMany(mappedBy = "camera")
+	@OneToMany(mappedBy = "camera", cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<Detections> detectionList;
 
 	public Camera(Long signUpID, CameraDTO cameraDTO) {

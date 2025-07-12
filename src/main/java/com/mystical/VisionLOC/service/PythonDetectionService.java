@@ -14,7 +14,7 @@ public class PythonDetectionService {
 	public void runDetectionAsync(Long signUpID) {
 		try {
 			// Change this to your actual Python file path
-			String scriptPath = "/home/mahima/cctv_app/cctv_yolo_logger.py";
+			String scriptPath = "../cctv_app/cctv_yolo_logger.py";
 
 			// If using python3, change to "python3"
 			ProcessBuilder builder = new ProcessBuilder("python3", scriptPath);

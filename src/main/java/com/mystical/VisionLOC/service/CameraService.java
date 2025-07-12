@@ -8,6 +8,7 @@ import java.util.List;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.mystical.VisionLOC.dao.CameraDAO;
 import com.mystical.VisionLOC.dto.CameraDTO;
@@ -27,6 +28,7 @@ public class CameraService {
 
 	static final double EARTH_RADIUS_METERS = 6371000; // Earth's radius in meters
 
+	@Transactional
 	public ResponseEntity<?> createCamera(Long signUpID, CameraDTO cameraDTO) {
 		Camera camera = new Camera(signUpID, cameraDTO);
 		dao.save(camera);
@@ -54,6 +56,7 @@ public class CameraService {
 		}
 	}
 
+	@Transactional
 	public List<CameraDTO> getCameraList(Long signUpID) {
 		List<Camera> cameraList = dao.getAllCameras(signUpID);
 		List<CameraDTO> responseList = new ArrayList<CameraDTO>();
@@ -63,6 +66,7 @@ public class CameraService {
 		return responseList;
 	}
 
+	@Transactional
 	public ResponseEntity<?> deleteCamera(Long signUpID, Long id) {
 		Camera camera = dao.getCameraByID(id);
 		if (camera != null) {
@@ -115,7 +119,7 @@ public class CameraService {
 			double angleOffsetDeg = (dx / imageWidth) * camera.getFocalLengthPx();
 
 			// Step 5: Calculate the bearing of the object relative to the camera's heading
-			int cameraHeading = 0; // (optional: camera orientation, default 0 = North
+			double cameraHeading = camera.getFovDeg(); // (optional: camera orientation, default 0 = North
 			double bearingDeg = (cameraHeading + angleOffsetDeg) % 360;
 
 			// Step 6: Convert camera lat/lon to radians for calculation

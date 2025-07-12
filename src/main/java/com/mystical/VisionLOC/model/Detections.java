@@ -2,6 +2,7 @@ package com.mystical.VisionLOC.model;
 
 import java.time.LocalDateTime;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -32,7 +33,7 @@ public class Detections {
 	private String imagePath;
 	@Column(nullable = false)
 	private Long confidence;
-	@OneToOne
+	@OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
 	@JoinColumn(name = "bounding_box_id	", referencedColumnName = "id")
 	private BoundingBox boundingBox;
 	@Column(nullable = false)
